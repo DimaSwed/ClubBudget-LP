@@ -8,6 +8,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/media.css" />
 		<title>Cloud Budget</title>
 	</head>
 	<body>
@@ -31,6 +32,7 @@
 							<li class="navbar_menu-item"><a href="#contact">Контакты</a></li>
 							<li class="navbar_menu-item"><a href="#">Войти</a></li>
 						</ul>
+
 						<button class="navbar__menu-btn">Вход</button>
 						<!-- бургер -->
 						<a data-target="slide-out" class="burger sidenav-trigger">
@@ -42,7 +44,12 @@
 						<!-- BURGER -->
 						<ul id="slide-out" class="sidenav">
 							<li>
-								<a class="sidenav__logo" href="#top">ArchiWeb</a>
+								<!-- <a class="sidenav__logo" href="#top">ArchiWeb</a> -->
+
+								<a href="#" id="top" class="sidenav__logo">
+									<img src="img/dashicons-cloud.svg" alt="logo" />
+									CloudBudget
+								</a>
 							</li>
 							<div class="divider"></div>
 							<li><a href="#header">Обзор</a></li>
@@ -57,7 +64,7 @@
 					<div class="header__content">
 						<h1 class="header__title">CloudBudget</h1>
 						<p class="header__text">Управление бюджетом в для всех. Всего 69,95 € в месяц после 7-дневной пробной версии за 4,99 €</p>
-						<button class="header__content-btn">Попробовать</button>
+						<button class="header__content-btn"><span>Попробовать</span></button>
 					</div>
 				</div>
 			</div>
@@ -94,7 +101,7 @@
 					<!-- grid сетка -->
 					<div class="overview__grid">
 						<!-- 1я карточка -->
-						<div class="overview__grid-card card_1">
+						<div class="overview__grid-card">
 							<img class="overview__img" src="img/O - Bg.png" alt="picture" />
 							<div class="overview__grid-content">
 								<h5 class="overview__grid-title">Поддерживает все валюты и карты</h5>
@@ -103,7 +110,7 @@
 							</div>
 						</div>
 						<!-- 2я карточка -->
-						<div class="overview__grid-card card_2">
+						<div class="overview__grid-card">
 							<img class="overview__img" src="img/O - Bg (1).png" alt="picture" />
 							<div class="overview__grid-content">
 								<h5 class="overview__grid-title">Управляйте своими расходами на ходу</h5>
@@ -112,7 +119,7 @@
 							</div>
 						</div>
 						<!-- 3я карточка -->
-						<div class="overview__grid-card card_3">
+						<div class="overview__grid-card">
 							<img class="overview__img" src="img/O - Bg (2).png" alt="picture" />
 							<div class="overview__grid-content">
 								<h5 class="overview__grid-title">Управление бюджетом осуществляется в облаке</h5>
@@ -134,7 +141,7 @@
 					<!-- grid сетка -->
 					<div class="features__grid">
 						<!-- 1я карточка -->
-						<div class="features__grid-item item_1">
+						<div class="features__grid-item features-fx">
 							<h3 class="features__item-title">01</h3>
 							<div class="features__grid-content">
 								<img class="features__icon" src="img/R - Frame 3.svg" alt="icon" />
@@ -144,7 +151,7 @@
 							</div>
 						</div>
 						<!-- 2я карточка -->
-						<div class="features__grid-item item_2">
+						<div class="features__grid-item item_2 features-fx">
 							<h3 class="features__item-title">02</h3>
 							<div class="features__grid-content">
 								<img class="features__icon" src="img/R - Frame 4.svg" alt="icon" />
@@ -154,7 +161,7 @@
 							</div>
 						</div>
 						<!-- 3я карточка -->
-						<div class="features__grid-item item_3">
+						<div class="features__grid-item item_3 features-fx">
 							<h3 class="features__item-title">03</h3>
 							<div class="features__grid-content">
 								<img class="features__icon" src="img/R - iwwa-file-pdf.svg" alt="icon" />
@@ -164,7 +171,7 @@
 							</div>
 						</div>
 						<!-- 4я карточка -->
-						<div class="features__grid-item item_4">
+						<div class="features__grid-item item_4 features-fx">
 							<h3 class="features__item-title">04</h3>
 							<div class="features__grid-content">
 								<img class="features__icon" src="img/R - iwwa-file-csv.svg" alt="icon" />
@@ -190,8 +197,16 @@
 							Мы помогаем вам отслеживать ваши привычки в расходах, чтобы вы могли легко определить и сократить ненужные расходы. Просто присоединяйтесь сегодня, чтобы начать!
 						</p>
 						<div class="download__icons">
-							<img src="img/ion-logo-google-playstore.svg" alt="icon" />
-							<img src="img/ion-logo-apple-appstore.svg" alt="icon" />
+							<ul>
+								<li>
+									<a href="#"><img class="icon" src="img/ion-logo-google-playstore.svg" alt="icon" /></a>
+								</li>
+								<li>
+									<a href="#"><img class="icon" src="img/ion-logo-apple-appstore.svg" alt="icon" /></a>
+								</li>
+							</ul>
+							<!-- <a href="#"><img src="img/ion-logo-google-playstore.svg" alt="icon" /></a>
+							<a href="#"><img src="img/ion-logo-apple-appstore.svg" alt="icon" /></a> -->
 						</div>
 					</div>
 
@@ -215,11 +230,11 @@
 
 					<!-- Правый блок -->
 
-					<div class="contact__form">
-						<input type="text" placeholder="Имя" />
-						<input type="text" placeholder="Телефон" />
-						<button class="contact__form-btn">Отправить</button>
-					</div>
+					<form class="contact__form">
+						<input type="text" placeholder="Имя" required />
+						<input type="tel" name="tel" placeholder="Телефон" required />
+						<button type="submit" class="contact__form-btn">Отправить</button>
+					</form>
 				</div>
 			</div>
 		</section>
@@ -239,5 +254,8 @@
 				</div>
 			</div>
 		</footer>
+
+		<script src="js/materialize.min.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>
